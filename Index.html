@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venda de Nuggets de Frango</title>
+  <style>
+    <body>
+    {
+      font-family: Arial, sans-serif-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 1auto;
+      padding: 30px;
+    }
+
+    .carousel {
+      
+      display: none;
+    }
+
+    .active {
+     
+      display: block;
+    }
+
+   
+     .btn {
+      
+      padding: 5px;
+      background-color: #ffcc00;
+      color: #8c0000;
+      text-decoration: none;
+      margin: 5px;
+    }
+    h1{color:#8d1f00; }
+  </style>
+</head>
+<body>
+
+   
+    <div class="container">
+   
+    <div class="carousel active" id="home">
+      <img src="logo.jpeg" alt="logo.jpeg Image">
+      <h1>Bem-vindo à nossa loja de Nuggets de Frango</h1>
+      
+        <a href="#" class="btn" onclick="changePage('login')">LOGIN</a>
+    </div>
+      
+    
+    <div class="carousel" id="login">
+     <h2>Faça login para acessar as opções de escolha</h2>
+     <label for="nome">Nome:</label> <input type="text" id="nome" name="nome" required><br><br>
+     <label for="senha">Senha:</label>
+<input type="password" id="senha" name="senha" required><br><br>
+      <img src="logo.jpeg" alt="logo.jpeg Image">
+       <a href="#" 
+         class="btn" 
+         onclick="changePage('escolha')">ENTRAR</a>
+         
+    </div>
+
+   
+    <div class="carousel" id="escolha">
+      <h2>Escolha entre nossas opções de Nuggets de Frango</h2>
+      <ul>
+       
+      <li>Nuggets Tradicional - R$10,0</li>
+       <img src="Frango .jpeg" alt="Frango .jpeg Image">
+        <li>Nuggets Picante - R$12,00</li>
+        <img src="Apimentado .jpeg" alt="Apimentado .jpeg Image">
+        <li>Nuggets Vegetariano - R$15,00</l>
+         <img src="Vegetariano .jpeg" alt="Vegetariano .jpeg Image">
+      </ul>
+      
+      
+      
+        <a href="#" class="btn" onclick="changePage('contato')">CONTATO</a>
+    </div>
+
+    <div class="carousel" id="contato">
+      <h2>Entre em contato conosco para fazer seu pedido</h2>
+      
+      <p>Telefone: (11) 1234-5678</p>
+       <img src="logo.jpeg" alt="logo.jpeg Image">
+      <p>Email: contato@nuggetsfrango.com</>
+    </div>
+    
+  </div>
+
+  <script>
+    function changePage(pageId) {
+      const carousels = document.getElementsByClassName('carousel');
+      for (let i = 0; i < carousels.length; i++) {
+        carousels[i].classList.remove('active');
+      }
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
